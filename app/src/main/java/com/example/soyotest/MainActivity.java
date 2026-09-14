@@ -45,6 +45,11 @@ public class MainActivity extends Activity {
 
         TextView title = text("SOYO MESAJ YARDIMCISI v1.3.1", 24, true);
         root.addView(title);
+
+        TextView developer = text("Developed by Alves", 13, true);
+        developer.setTextColor(Color.DKGRAY);
+        developer.setPadding(0, dp(3), 0, dp(2));
+        root.addView(developer);
         TextView sub = text("Onerilenler -> Sohbet -> Mesaj -> Geri -> Siradaki profil akisini otomatik yurutur.", 14, false);
         sub.setPadding(0, dp(6), 0, dp(18));
         root.addView(sub);
@@ -114,6 +119,12 @@ public class MainActivity extends Activity {
         note.setTextColor(Color.DKGRAY);
         note.setPadding(0, dp(24), 0, 0);
         root.addView(note);
+
+        TextView credit = text("Designed & Developed by Alves", 12, true);
+        credit.setTextColor(Color.DKGRAY);
+        credit.setGravity(Gravity.CENTER);
+        credit.setPadding(0, dp(28), 0, dp(4));
+        root.addView(credit);
 
         setContentView(scroll);
     }
