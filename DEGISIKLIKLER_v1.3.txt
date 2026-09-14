@@ -1,0 +1,9 @@
+v1.3
+- Otomasyon liste sonunda artik kendini kapatmiyor; basa sarip tekrar devam ediyor.
+- Kaydirma takilmasinda accessibility scroll sonrasi fiziksel swipe yedegi eklendi.
+- Ayni sayfa tespiti yalnizca gercek bir kaydirma denemesinden sonra yapiliyor.
+- Mesaj yazildiktan sonra gonder ikonunun aktiflesmesi icin bir sonraki accessibility agaci bekleniyor.
+- Gonder dugmesine ACTION_CLICK basarisiz olursa koordinat tap yedegi eklendi.
+- Gonderme dogrulamasi ve yeniden deneme sayisi guclendirildi (4 deneme).
+- Eski ayni mesaj balonu yeni gonderim gibi sayilmiyor.
+- Surum 1.3 / versionCode 4 yapildi.

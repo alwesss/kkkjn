@@ -1,0 +1,8 @@
+v1.2
+- Android 12 ve altinda erisilebilirlik servisini dusurebilen BroadcastReceiver API uyumsuzlugu giderildi.
+- Otomasyon baslatilirken erisilebilirlik servisinin acik olup olmadigi kontrol ediliyor.
+- Ana ekranda Erisilebilirlik: ACIK/KAPALI bilgisi gosteriliyor.
+- Hedef uygulama disindayken on plandaki paket adi durum metninde gosteriliyor.
+- Surum 1.2 / versionCode 3 yapildi.
+- Mesaj yalnizca giris alani temizlendiginde veya mesaj ekranda gorundugunde gonderildi sayiliyor.
+- Listeye donus durumunda zamanlayiciyi surekli sifirlayan hata giderildi.
