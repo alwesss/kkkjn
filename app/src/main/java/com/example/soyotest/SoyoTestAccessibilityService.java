@@ -436,7 +436,7 @@ public class SoyoTestAccessibilityService extends AccessibilityService {
     private void scrollList(AccessibilityNodeInfo root, boolean forward) {
         // Bir onceki accessibility kaydirmasi ekrani degistirmediyse ayni aksiyona
         // takilip kalma; bu turda fiziksel swipe yedegini zorla.
-        boolean forceGesture = samePageCount > 0;
+        boolean forceGesture = true; // Yeniler sekmesine gecme - sadece dikey swipe
         if (!forceGesture) {
             int action = forward ? AccessibilityNodeInfo.ACTION_SCROLL_FORWARD : AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD;
             AccessibilityNodeInfo best = findBestScrollable(root);
