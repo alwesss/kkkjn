@@ -652,6 +652,10 @@ public class SoyoTestAccessibilityService extends AccessibilityService {
         setStatus(status);
     }
 
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
+    }
+
     private long elapsed() { return System.currentTimeMillis() - stateSince; }
 
     private void resetState() {

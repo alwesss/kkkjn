@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
         root.setPadding(dp(20), dp(20), dp(20), dp(32));
         scroll.addView(root);
 
-        TextView title = text("SOYO MESAJ YARDIMCISI v1.3", 24, true);
+        TextView title = text("SOYO MESAJ YARDIMCISI v1.3.1", 24, true);
         root.addView(title);
         TextView sub = text("Onerilenler -> Sohbet -> Mesaj -> Geri -> Siradaki profil akisini otomatik yurutur.", 14, false);
         sub.setPadding(0, dp(6), 0, dp(18));
