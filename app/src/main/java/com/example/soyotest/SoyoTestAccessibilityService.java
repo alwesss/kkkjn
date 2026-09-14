@@ -360,6 +360,7 @@ public class SoyoTestAccessibilityService extends AccessibilityService {
                 Rect nb = new Rect();
                 n.getBoundsInScreen(nb);
                 if (nb.isEmpty() || nb.centerX() <= eb.centerX()) continue;
+                if (nb.centerX() < eb.right + dp(28)) continue;
                 int dy = Math.abs(nb.centerY() - eb.centerY());
                 int dx = nb.centerX() - eb.centerX();
                 boolean clickable = isClickableTree(n);
@@ -370,7 +371,7 @@ public class SoyoTestAccessibilityService extends AccessibilityService {
                     buttonLike = c.contains("button") || c.contains("image");
                 }
                 if (!clickable && !buttonLike) continue;
-                int score = dy * 5 + dx;
+                int score = dy * 5 + (getResources().getDisplayMetrics().widthPixels - nb.centerX());
                 if (clickable) score -= 120;
                 if (buttonLike) score -= 80;
                 if (dy < Math.max(dp(90), eb.height() * 2) && dx < getResources().getDisplayMetrics().widthPixels / 2
@@ -407,7 +408,7 @@ public class SoyoTestAccessibilityService extends AccessibilityService {
             edit.getBoundsInScreen(eb);
             int w = getResources().getDisplayMetrics().widthPixels;
             int hgt = getResources().getDisplayMetrics().heightPixels;
-            int x = Math.min(w - dp(24), Math.max(eb.right + dp(24), w - dp(52)));
+            int x = Math.min(w - dp(8), Math.max(eb.right + dp(32), w - dp(30)));
             int y = Math.max(dp(24), Math.min(hgt - dp(24), eb.centerY()));
             return tapAt(x, y);
         }
